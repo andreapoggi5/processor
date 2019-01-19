@@ -1,0 +1,25 @@
+type: "average"
+variables:
+  - "T_DUR_CICLO"
+  - "T_DUR_CHIUS_ST"
+  - "T_DUR_LOCK_ST"
+sourceTopic: "capsulatrice-1-dati-ciclo"
+destinationTopic: "capsulatrice-1-dati-ciclo-average"
+metadata:
+  message:
+    - "machine_id"
+    - "machine_serial"
+  description: "Media capsulatrice-1-dati-ciclo"
+  source_topic: "capsulatrice-1-dati-ciclo"
+  destination_topic: "capsulatrice-1-dati-ciclo-average"
+configuration:
+  replication.factor: 1
+  application.id: "processors"
+  bootstrap.servers: "localhost:9092"
+  schema.registry.url: "http://localhost:8081"
+  security.protocol: "PLAINTEXT"
+  ssl.truststore.location: ""
+  ssl.truststore.password: ""
+  ssl.keystore.location: ""
+  ssl.keystore.password: ""
+  ssl.key.password: ""
